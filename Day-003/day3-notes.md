@@ -1,47 +1,46 @@
-# Day 3: Concatenation
+# Day 3 - Modules and pip in Python
 
-## What I Learned
-- Concatenation means combining strings and variables together.
-- The `print()` function allows multiple values to be printed using commas.
-- Each part of the output (text or variable) should be separated by a comma inside `print()`.
-- Variables should not be inside quotes, or they'll be treated as plain text.
+## What is a Module?
+A **module** is like a code library which can be used to borrow code written by somebody else in our Python program.
 
----
+There are two types of modules in Python:
 
-## Examples
+### 1. Built-in Modules
+- These come pre-installed with Python.
+- No need to install them explicitly.
+- Examples: `math`, `random`, `datetime`, `os`
 
-### Basic Concatenation
+#### Example: Using a built-in module
 ```python
-myName = input("What's your name? ")
-myLunch = input("What are you having for lunch? ")
-print(myName, "is going to be chowing down on", myLunch, "very soon!")
+import math
+print(math.sqrt(25))  # Output: 5.0
 ```
 
-**Explanation:**
-- Each part (variable or string) is separated by commas.
-- `print()` automatically adds spaces between each item.
+### 2. External Modules
+- These are written by other developers and not included with Python by default.
+- You need to install them using a package manager like `pip`.
+- Examples: `pandas`, `numpy`, `flask`, `requests`
 
----
+## The `pip` command
+`pip` is used as a package manager to install external Python modules.
 
-## Common Errors
-
-### Missing Commas
-```python
-yourName = input("Name: ")
-whatYear = input("What year is it?: ")
-# print(yourName "thinks it is" whatYear) ❌
-
-print(yourName, "thinks it is", whatYear)  # ✅
+### Installing a module:
+```bash
+pip install pandas
 ```
 
-### Variables Inside Quotes
+## Using a Module in Python
+We use the `import` keyword to bring a module into our program.
+
+### Example: Using an external module
 ```python
-# print("yourName, thinks it is, whatYear") ❌ (prints literal string)
-print(yourName, "thinks it is", whatYear)   # ✅ (prints values of variables)
+import pandas as pd
+
+# Read and work with a file named 'words.csv'
+df = pd.read_csv('words.csv')
+print(df)  # This will display the contents of the words.csv file
 ```
 
----
+You can install and explore other modules and look into their documentation for usage instructions.
 
-## Practice Ideas
-- Ask the user their name and favorite movie, then output a sentence using both.
-- Make a short dialogue between two characters using user input and `print()`.
+**Note:** We’ll be doing this often in the later part of this course.
