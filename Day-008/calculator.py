@@ -1,3 +1,6 @@
+print("This is a Solution to Calculator Exercise of Day-007.")
+print()
+print()
 print("---- Welcome to the calculator ----")
 a = float(input("Enter the first number: "))
 b =  float(input("Enter the second number: "))
@@ -19,6 +22,6 @@ elif(c == 4):
     print("The value of", a, "/", b, "is: ", a / b)
 else :
     print("Invalid choice, Enter available choice between 1 to 4")
-    
+
 print()
 print("Thank you for using the calculator")
